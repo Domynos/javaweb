@@ -1,0 +1,25 @@
+<div id="menu">
+<ul>
+ <li><a href="#">Home</a></li>
+  <li><a href="#">Upload</a></li>
+  <li><a href="#">Download</a></li>
+ <li><a href="#">Search</a></li>
+ <li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div id="container">
+<div id="singup">
+Singup Here :
+</div>
+<div id="connect">
+Connect Here :
+</div>
+</div>
+
+#set ($js = $context.getProperties().getProperty("serverRoot")+"/res/js/user/singup.js")
+$context.setJsDependency($js)
+$context.addOnJsReady("new Esgi.module.user.Singup({ id : '#singup'})")
+
+#set ($js = $context.getProperties().getProperty("serverRoot")+"/res/js/user/connect.js")
+$context.setJsDependency($js)
+$context.addOnJsReady("new Esgi.module.user.Connect({ id : '#connect'})")

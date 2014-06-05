@@ -1,0 +1,15 @@
+Pour créer un nouveau module :
+
+créer module.js
+créer Module.java
+
+Dans votre page vélocity .vm ajouter : <div id="module></div>
+
+Puis charger le JS dans la même page .vm :
+
+#set ($js = $context.getProperties().getProperty("serverRoot")+"/res/js/user/module.js")
+$context.setJsDependency($js)
+$context.addOnJsReady("new Esgi.module.user.Singup({ id : '#module'})")
+
+Dans FrontController.java, ajouter le module :
+registerAction(new Module());

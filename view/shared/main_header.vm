@@ -1,0 +1,9 @@
+
+<div id="header">
+<div id="baniere">
+</div>
+</div>
+
+#set ($js = $context.getProperties().getProperty("serverRoot")+"/res/js/user/test.js")
+$context.setJsDependency($js)
+$context.addOnJsReady("new Esgi.module.user.Test({ id : '#baniere'})")
