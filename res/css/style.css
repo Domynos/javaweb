@@ -18,6 +18,7 @@ body div#container{
 	padding-right:20px;
 	padding-top:30px;
 	padding-bottom:30px;
+	border-radius: 10px;
 	
 }
 
@@ -29,9 +30,10 @@ div#connect{
 	display:inline;
 }
 
-div#header {
+div#header{
 	background-image:url('img/fond_gris.jpg');
 }
+
 
 div#header div#baniere{
 	width:1000px;
@@ -41,16 +43,26 @@ div#header div#baniere{
 
 /* Menu */
 
-div#menu{
+div#menu, div#footer{
 	border:1px solid black;
+	border-radius: 10px;
 	background-image:url(img/noir-1.png);
 	width:1000px;
-	height:52px;
 	margin-left: auto;
  	margin-right: auto;
 	padding-left:20px;
 	padding-right:20px;
 }
+
+div#menu{
+	
+	height:52px;
+}
+
+div#footer{
+	height:150px;
+}
+
 ul {
  padding:0;
 	margin-left: auto;

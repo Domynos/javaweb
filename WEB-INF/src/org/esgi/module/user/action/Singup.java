@@ -24,9 +24,11 @@ public class Singup extends AbstractAction{
 		Map<String,Object> mapWhere = new HashMap<String, Object>();
 		String login = context.getRequest().getParameter("login");
 		String password = context.getRequest().getParameter("password");
+		String email = context.getRequest().getParameter("email");
 		mapWhere.put("login",login);
 		mapWhere.put("password", password);
 		System.out.println(login+" "+password);
+		
 		
 		
 	}

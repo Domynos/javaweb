@@ -19,6 +19,7 @@ public class User implements IUser {
 	@ORM_FIELD("TEXT")
 	public String userPseudo;
 
+
 	@Override
 	public int getId() {
 		return this.userId;
