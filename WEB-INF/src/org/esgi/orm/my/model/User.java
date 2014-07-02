@@ -7,8 +7,8 @@ import org.esgi.orm.my.annotations.ORM_SCHEMA;
 import org.esgi.orm.my.annotations.ORM_TABLE;
 import org.esgi.orm.my.interfaces.IUser;
 
-@ORM_SCHEMA("4shan")
-@ORM_TABLE("User")
+@ORM_SCHEMA("javaweb")
+@ORM_TABLE("user")
 public class User implements IUser {
 	@ORM_PK
 	@ORM_EXTRA("AUTO_INCREMENT")
@@ -18,7 +18,8 @@ public class User implements IUser {
 	public String userMail;
 	@ORM_FIELD("TEXT")
 	public String userPseudo;
-
+	@ORM_FIELD("TEXT")
+	public String userPassword;
 
 	@Override
 	public int getId() {
@@ -42,12 +43,20 @@ public class User implements IUser {
 
 	@Override
 	public void setPseudo(String pseudo) {
-		this.userMail = pseudo;
+		this.userPseudo = pseudo;
+	}
+	
+	public String getUserPassword() {
+		return userPassword;
+	}
+
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 	
 	@Override
 	public String toString() {
-		return "User [id=" + userId + ", mail=" + userMail + ", pseudo=" + userPseudo+"]";
+		return "User [id=" + userId + ", mail=" + userMail + ", pseudo=" + userPseudo+", password=" + userPassword+"]";
 	}
 	
 	@Override

@@ -1,4 +1,3 @@
-
 $(function(){
 Esgi.module = Esgi.module || {}
 Esgi.module.user = Esgi.module.user || {}

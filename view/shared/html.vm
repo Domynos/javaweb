@@ -5,6 +5,8 @@
      <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
    </head>
    <body style="background-color:#85C2E1;">
+   #set($foo = $context.getRequest().getParameter("login"))
+   $foo
     $context.getFragment("shared/main_header")
     $context.getFragment("__CURRENT__")
     $context.getFragment("shared/main_footer")

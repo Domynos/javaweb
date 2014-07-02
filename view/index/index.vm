@@ -7,13 +7,30 @@
  <li><a href="#">Contact</a></li>
 </ul>
 </div>
+
 <div id="container">
-<div id="singup">
-Singup Here :
-</div>
-<div id="connect">
-Connect Here :
-</div>
+
+	
+		<div id="singup">
+		
+		<span name = "
+		
+		Test pour voir si j'arrive a 
+		récupéré le paramètre login que j'ai défini
+		dans la fonction execute() de Connect.java
+		Ca marche pas...
+		
+		">
+		
+		#set($foo = $context.getRequest().getParameter("login"))
+		$foo
+		Singup Here :
+		</div>
+
+	<div id="connect">
+	Connect Here :
+	</div>
+
 </div>
 
 #set ($js = $context.getProperties().getProperty("serverRoot")+"/res/js/user/singup.js")
